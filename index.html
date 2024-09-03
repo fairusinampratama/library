@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="first">
+        <div class="header">
+          <div class="title">Library</div>
+        </div>
+        <div class="content">
+          <div class="btnAddBook">
+            <button class="addBook" id="addBook">+ Add Book</button>
+          </div>
+          <div class="modal" id="modal">
+            <div class="modal-content">
+              <form action="script.js" class="form-add">
+                <div class="add-container">
+                    <label for="card-title-add">Title</label>
+                    <input type="text" name="card-title-add" id="card-title-add" />
+                </div>
+                <div class="add-continer">
+                    <label for="card-author-add">Author</label>
+                    <input
+                      type="text"
+                      name="card-author-add"
+                      id="card-author-add"
+                    />
+                </div>
+                <div class="add-container">
+                    <label for="card-pages-add">Pages</label>
+                    <input type="number" name="card-pages-add" id="card-pages-add" />
+                </div>
+                <div class="add-container">
+                    <label for="card-status-add">Read</label>
+                    <input
+                      type="checkbox"
+                      name="card-status-add"
+                      id="card-status-add"
+                    />
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+              <span class="close">&times;</span>
+            </div>
+          </div>
+          <div class="card-book">
+            <div class="card-container">
+              <div class="card-title" id="title">Naruto</div>
+              <div class="card-author" id="author">M. Kishimoto</div>
+              <div class="card-page" id="page">295 Pages</div>
+              <div class="card-status" id="status">
+                <div class="read">Read</div>
+              </div>
+              <div class="card-remove" id="remove">
+                <div class="remove">Remove</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="copyright">Copyright &#169; Excel44M @GitHub</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
