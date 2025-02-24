@@ -1,0 +1,242 @@
+:root {
+  --primary-color: #f2f6d0;
+  --secondary-color: #efdcab;
+  --accent-color: #d98324;
+  --accent-color-darker: #be7221;
+  --background-color: #443627;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-form {
+  background-color: var(--primary-color);
+  border: none;
+  border-bottom: 2px solid var(--accent-color);
+  height: 40px;
+  color: var(--accent-color);
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-form[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent-color);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.input-form[type="checkbox"]:checked {
+  background-color: var(--accent-color);
+}
+
+.input-form[type="checkbox"]:checked::after {
+  font-family: "Material Symbols Outlined";
+  content: "check";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input-form:focus {
+  outline: none;
+}
+
+.button-form {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.button-form:hover {
+  background-color: var(--accent-color-darker);
+}
+
+.library {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 50px;
+}
+
+.stats {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-delete-all {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  max-width: 200px;
+  font-size: 1rem;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.button-delete-all:hover {
+  background-color: var(--accent-color-darker);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 10px;
+  border-bottom: 4px solid var(--accent-color);
+}
+
+td {
+  padding: 10px 20px;
+  border-bottom: 4px solid var(--accent-color);
+  color: var(--primary-color);
+}
+
+.check {
+  color: rgb(28, 226, 28);
+  cursor: pointer;
+}
+
+.check:hover {
+  color: rgb(71, 161, 71);
+}
+
+.close {
+  color: rgb(142, 142, 142);
+  cursor: pointer;
+}
+
+.close:hover {
+  color: rgb(95, 93, 93);
+}
+
+.delete {
+  color: rgb(243, 93, 93);
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: rgb(180, 93, 93);
+}
+
+/*Tablets and small desktop*/
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 30%;
+    padding: 40px;
+  }
+
+  .library {
+    width: 70%;
+    padding: 50px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .book-form {
+    font-size: 1.2rem;
+  }
+
+  .stats {
+    font-size: 2rem;
+    flex-direction: row;
+  }
+
+  table {
+    font-size: 1.2rem;
+  }
+}
+
+/*Large desktop*/
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .book-form {
+    gap: 20px;
+  }
+
+  .library {
+    gap: 100px;
+  }
+}
